@@ -7,9 +7,9 @@ module "gke" {
   region     = var.region
 
   zones = [
-    "ap-south-1-a",
-    "ap-south-1-b",
-    "ap-south-1-c"
+  "asia-south1-a",
+  "asia-south1-b",
+  "asia-south1-c"
   ]
 
   network    = var.network
@@ -28,7 +28,7 @@ module "gke" {
     {
       name               = "default-node-pool"
       machine_type       = "e2-medium"
-      node_locations     = "ap-south-1-b,ap-south-1-c"
+      node_locations     = "asia-south1-b,asia-south1-c"
       min_count          = 1
       max_count          = 10
       disk_size_gb       = 100
