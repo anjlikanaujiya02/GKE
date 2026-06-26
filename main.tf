@@ -40,9 +40,6 @@ module "gke" {
 
       service_account = "project-service-account@${var.project_id}.iam.gserviceaccount.com"
 
-      accelerator_count  = 1
-      accelerator_type   = "nvidia-l4"
-      gpu_driver_version = "LATEST"
 
       gpu_sharing_strategy       = "TIME_SHARING"
       max_shared_clients_per_gpu = 2
