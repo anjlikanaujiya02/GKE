@@ -7,9 +7,9 @@ module "gke" {
   region     = var.region
 
   zones = [
-  "asia-south1-a",
-  "asia-south1-b",
-  "asia-south1-c"
+    "asia-south1-a",
+    "asia-south1-b",
+    "asia-south1-c"
   ]
 
   network    = var.network
@@ -39,10 +39,6 @@ module "gke" {
       initial_node_count = 1
 
       service_account = "project-service-account@${var.project_id}.iam.gserviceaccount.com"
-
-
-      gpu_sharing_strategy       = "TIME_SHARING"
-      max_shared_clients_per_gpu = 2
     },
   ]
 
